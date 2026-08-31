@@ -28,13 +28,39 @@ export default function Experience() {
         }
       ],
       skills: ["DCF Valuation", "Comparable Company Analysis", "Variance Investigation", "Forecasting", "Financial Reconciliation"]
+    },
+    {
+      role: "Technology Risk Virtual Experience Program",
+      company: "EY (via Forage)",
+      period: "Apr 2026",
+      type: "Risk Assessment & IT Controls Simulation",
+      summary:
+        "Worked on simulated EY client scenarios involving data, IT, and access-control risks — assessing identified risks and translating findings into structured requirements and practical mitigation recommendations.",
+      deliverables: [
+        {
+          title: "Risk Identification & Assessment",
+          detail:
+            "Assessed identified risks across data, IT, and access-control domains, translating findings into structured requirements and practical mitigation recommendations for simulated client scenarios."
+        },
+        {
+          title: "Control Evaluation & Technical Analysis",
+          detail:
+            "Applied defined risk-assessment methodologies to evaluate controls, analyse technical issues, and communicate findings to non-technical stakeholders while considering business objectives."
+        },
+        {
+          title: "Risk-Informed Recommendations",
+          detail:
+            "Developed structured, risk-informed recommendations that demonstrated the ability to bridge technical analysis with business requirements and support informed decision-making."
+        }
+      ],
+      skills: ["Technology Risk", "IT Controls", "Access Management", "Risk Assessment", "Stakeholder Reporting", "Data Risk"]
     }
   ];
 
   return (
     <section id="experience" className="py-24 bg-slate-50/70 dark:bg-slate-900/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

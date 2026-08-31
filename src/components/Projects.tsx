@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { TrendingUp, BarChart2, PieChart, Layers, CheckCircle2, FileText, ArrowRight, Code, Database } from 'lucide-react';
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState<'all' | 'valuation' | 'quantitative'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'valuation' | 'quantitative' | 'data-analytics' | 'automation'>('all');
 
   const projects = [
     {
@@ -47,6 +47,48 @@ export default function Projects() {
         "Surfaced actionable cost optimization and rebalancing thresholds for institutional multi-asset portfolios."
       ],
       methodology: "Mean-Variance Optimization, Efficient Frontier Modeling, OLS Regression Factor Decomposition."
+    },
+    {
+      id: "financial-dashboard",
+      title: "Financial Data Analysis & Reporting Dashboard",
+      date: "Nov 2024 – Jun 2025",
+      category: "data-analytics",
+      categoryLabel: "Data Analysis & Business Intelligence",
+      description:
+        "End-to-end financial data analysis pipeline covering five years of multi-company financial data—cleaned, validated, and transformed into structured dashboards and management reports to drive a data-backed business recommendation.",
+      metrics: "5-Year Dataset | 3 Companies | Full BI Lifecycle",
+      icon: Database,
+      iconColor: "text-cyan-600 dark:text-cyan-400",
+      iconBg: "bg-cyan-100 dark:bg-cyan-950/60",
+      tags: ["SQL", "Excel", "Pivot Tables", "XLOOKUP", "Power Query", "Data Cleansing", "Management Reporting"],
+      highlights: [
+        "Defined analysis requirements and evaluation criteria, then cleaned, validated, and analysed five years of financial data across three companies using SQL and Excel to support a data-driven business recommendation.",
+        "Performed data cleansing, data mining, and statistical analysis; built structured dashboards and reports using advanced Excel functions (Pivot Tables, XLOOKUP, Power Query) for stakeholder review.",
+        "Conducted ratio and comparative analysis (ROE, liquidity, leverage, profitability) to evaluate performance against defined business criteria.",
+        "Documented data definitions and findings, delivering management information reporting and presenting recommendations clearly to a non-technical audience."
+      ],
+      methodology: "Ratio Analysis, Comparative Benchmarking, ETL Data Processing, Stakeholder-Ready BI Reporting."
+    },
+    {
+      id: "algo-trading",
+      title: "Algorithm-Based Automatic Trading System",
+      date: "Oct 2023 – Mar 2024",
+      category: "automation",
+      categoryLabel: "Algorithmic Trading & Automation",
+      description:
+        "Rules-based automated trading system designed from requirements analysis through to UAT-equivalent validation, leveraging real-time and historical market data through a Python ETL-style pipeline with integrated machine learning decision logic.",
+      metrics: "Real-Time ETL Pipeline | ML-Optimised Decision Engine",
+      icon: Code,
+      iconColor: "text-amber-600 dark:text-amber-400",
+      iconBg: "bg-amber-100 dark:bg-amber-950/60",
+      tags: ["Python", "Machine Learning", "ETL Pipeline", "Real-Time Data", "Backtesting", "UAT", "Process Architecture"],
+      highlights: [
+        "Analysed business and market requirements to design a rules-based data process in Python, using real-time and historical data through an ETL-style pipeline.",
+        "Applied data analysis and machine learning techniques to test and optimise decision logic, validating outcomes across multiple scenarios.",
+        "Tested and validated system performance and data accuracy, identifying and resolving process gaps prior to sign-off equivalent to report validation and UAT.",
+        "Documented system requirements, process architecture, testing methodology and transformation rules in a structured technical report."
+      ],
+      methodology: "Rules-Based Decision Logic, ETL Architecture, ML Model Validation, Scenario-Based Backtesting."
     }
   ];
 
@@ -109,6 +151,26 @@ export default function Projects() {
               }`}
             >
               Portfolio & Risk
+            </button>
+            <button
+              onClick={() => setActiveTab('data-analytics')}
+              className={`px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                activeTab === 'data-analytics'
+                  ? 'bg-indigo-600 text-white shadow-md'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+              }`}
+            >
+              Data & Reporting
+            </button>
+            <button
+              onClick={() => setActiveTab('automation')}
+              className={`px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                activeTab === 'automation'
+                  ? 'bg-indigo-600 text-white shadow-md'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+              }`}
+            >
+              Automation & ML
             </button>
           </div>
         </div>
