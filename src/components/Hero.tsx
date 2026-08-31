@@ -50,16 +50,33 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Headline */}
-            <motion.h1
+            {/* Name & Designation — Large Intro */}
+            <motion.div variants={itemVariants} className="mb-4">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.05]">
+                Pratik{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 dark:from-indigo-400 dark:via-cyan-300 dark:to-cyan-400">
+                  Chougule
+                </span>
+              </h1>
+              <p className="mt-3 text-lg sm:text-xl md:text-2xl font-semibold text-slate-600 dark:text-slate-300 tracking-wide">
+                Financial Analyst{' '}
+                <span className="text-slate-300 dark:text-slate-600 mx-1">|</span>{' '}
+                MSc Finance (UCC){' '}
+                <span className="text-slate-300 dark:text-slate-600 mx-1">|</span>{' '}
+                Computer Engineer
+              </p>
+            </motion.div>
+
+            {/* Tagline */}
+            <motion.h2
               variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-800 dark:text-slate-100 leading-[1.2] mb-6"
             >
               Transforming Complex Data into{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 dark:from-indigo-400 dark:via-cyan-300 dark:to-cyan-400">
                 High-Alpha Financial Strategy
               </span>
-            </motion.h1>
+            </motion.h2>
 
             {/* Subtitle */}
             <motion.p
